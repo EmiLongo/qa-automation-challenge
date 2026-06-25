@@ -12,6 +12,18 @@ El proyecto está diseñado y estructurado para evaluar la calidad y el correcto
 * **✉️ Contact (Contacto):** Reglas de negocio del formulario, límites de caracteres y validación de mensajes de error al enviar datos inválidos o vacíos.
 * **⚙️ Admin (Administración):** Flujo de autenticación (Login), protección de rutas y gestión del panel de administración.
 
+## Casos de Prueba
+Los casos de prueba utilizados para el diseño y desarrollo de las automatizaciones se encuentran documentados en la siguiente planilla:
+
+📋 Casos de prueba:
+https://docs.google.com/spreadsheets/d/1aDlBnAd0qb6rVTdew0WilTcnsAY6JqPPFY61w4O-BsM/edit?gid=1555944841#gid=1555944841
+
+## Gestión y documentación de Bugs
+Los defectos identificados durante la ejecución de las pruebas fueron registrados y documentados en el siguiente tablero de Trello:
+
+🐞 Registro de bugs:
+https://trello.com/b/Ykth914S/challenguegrupo-12
+
 ## 📁 Estructura del Proyecto
 El proyecto sigue las mejores prácticas de arquitectura de Cypress (Page Object Model mediante Custom Commands y Data-Driven Testing):
 
