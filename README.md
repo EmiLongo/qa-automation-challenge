@@ -67,4 +67,9 @@ npx cypress run
 ```
 
 ## 👥 Autores
-* **Grupo 12** - Resolución del Challenge de QA Automation.
+**Grupo 12** - Resolución del Challenge de QA Automation.
+
+* **Brenda Verónica Fernández** - 
+* **Emiliano Longo** - emi.longo@gmail.com
+* **Kevinn Zhamir Pomachagua Vilchez** - kevinn.pomachagua@gmail.com
+* **Rustic Anselmo** - 
