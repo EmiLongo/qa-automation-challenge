@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
 })
 
-describe('Challenge Grupo 12 - Pruebas del Módulo de Administración', () => {
+describe('Módulo de Admin', () => {
 
     beforeEach(() => {
         cy.index()
@@ -49,11 +49,11 @@ describe('Challenge Grupo 12 - Pruebas del Módulo de Administración', () => {
             // Primero iniciar sesión como administrador
             cy.loginAdmin(data.credenciales.user, data.credenciales.pass)
             cy.verificarLoginExito()
-            
+
             const cp = data.roomCases.find(test => test.id === 'CP05')
             // Rellenar formulario y crear la habitación
             cy.crearHabitacion(cp.data.roomName, cp.data.type, cp.data.accessible, cp.data.roomPrice, cp.data.features)
-            
+
             // Verificar que la habitación recién creada sea visible en la lista
             cy.contains('.row', cp.data.roomName).should('be.visible')
         })
@@ -64,11 +64,11 @@ describe('Challenge Grupo 12 - Pruebas del Módulo de Administración', () => {
             // Primero iniciar sesión como administrador
             cy.loginAdmin(data.credenciales.user, data.credenciales.pass)
             cy.verificarLoginExito()
-            
+
             const cp = data.roomCases.find(test => test.id === 'CP06')
             // Intentar crear la habitación sin rellenar campos
             cy.crearHabitacion(cp.data.roomName, cp.data.type, cp.data.accessible, cp.data.roomPrice, cp.data.features)
-            
+
             // Verificar que el mensaje de alerta sobre la creación fallida sea visible
             cy.contains(cp.expectedAlert).should('be.visible')
         })
@@ -79,7 +79,7 @@ describe('Challenge Grupo 12 - Pruebas del Módulo de Administración', () => {
             // Primero iniciar sesión como administrador
             cy.loginAdmin(data.credenciales.user, data.credenciales.pass)
             cy.verificarLoginExito()
-            
+
             const cp = data.roomDetailCases.find(test => test.id === 'CP08')
             // Visualizar detalles de la habitación
             cy.verificarDetallesHabitacion(cp.roomName)
@@ -91,13 +91,13 @@ describe('Challenge Grupo 12 - Pruebas del Módulo de Administración', () => {
             // Primero iniciar sesión como administrador
             cy.loginAdmin(data.credenciales.user, data.credenciales.pass)
             cy.verificarLoginExito()
-            
+
             const cp = data.roomDetailCases.find(test => test.id === 'CP09')
             // Navegar a detalles de la habitación
             cy.verificarDetallesHabitacion(cp.roomName)
             // Cambiar precio de la habitación
             cy.editarHabitacionPrecio(cp.newPrice)
-            
+
             // Verificar que el nuevo precio actualizado se visualice
             cy.contains(cp.newPrice).should('be.visible')
         })
@@ -130,7 +130,7 @@ describe('Challenge Grupo 12 - Pruebas del Módulo de Administración', () => {
             // Primero iniciar sesión como administrador
             cy.loginAdmin(data.credenciales.user, data.credenciales.pass)
             cy.verificarLoginExito()
-            
+
             const cp = data.brandingCases.find(test => test.id === 'CP13')
             // Actualizar branding del hotel
             cy.actualizarBranding(cp.name, cp.contactPhone)

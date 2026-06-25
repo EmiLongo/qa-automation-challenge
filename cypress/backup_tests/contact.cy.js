@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
 })
 
-describe('Challenge Grupo 12 - Contact Form', () => {
+describe('Modulo Contact', () => {
 
     beforeEach(() => {
         cy.index()
